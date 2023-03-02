@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom";
 export function DefaultLayoutComponent() {
   return (
     <Fragment>
-      <header>Header</header>
+      <header data-testid="header-element">Header</header>
 
       <Outlet />
 
-      <footer>Footer</footer>
+      <footer data-testid="footer-element">Footer</footer>
     </Fragment>
   );
 }
