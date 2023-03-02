@@ -21,7 +21,7 @@
       "@types/*": ["./src/global/types/*"],
       "@pages/*": ["./src/global/pages/*"],
       "@styles/*": ["./src/global/styles/*"],
-      "@config/*": ["./src/global/config/*"],
+      "@configs/*": ["./src/global/configs/*"],
       "@services/*": ["./src/global/services/*"],
       "@components/*": ["./src/global/components/*"]
     }

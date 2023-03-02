@@ -12,7 +12,7 @@ export default defineConfig({
       "@types": path.resolve(__dirname, "./src/global/types"),
       "@pages": path.resolve(__dirname, "./src/global/pages"),
       "@styles": path.resolve(__dirname, "./src/global/styles"),
-      "@config": path.resolve(__dirname, "./src/global/config"),
+      "@configs": path.resolve(__dirname, "./src/global/configs"),
       "@services": path.resolve(__dirname, "./src/global/services"),
       "@components": path.resolve(__dirname, "./src/global/components"),
     },
