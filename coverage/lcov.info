@@ -1,5 +1,5 @@
 TN:
-SF:src/global/components/Avatar/index.tsx
+SF:src\global\components\Avatar\index.tsx
 FN:3,get
 FN:3,AvatarComponent
 FNF:2
@@ -42,7 +42,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:src/global/components/layouts/Default/index.tsx
+SF:src\global\components\layouts\Default\index.tsx
 FN:4,get
 FN:4,DefaultLayoutComponent
 FNF:2

@@ -4,7 +4,7 @@ import { AvatarComponent } from ".";
 import { IComponentParams } from "./types";
 
 export default {
-  title: "Components/Avatar ",
+  title: "Components/Avatar",
   component: AvatarComponent,
 } as Meta;
 
