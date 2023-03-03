@@ -4,8 +4,8 @@ import "@testing-library/jest-dom/extend-expect";
 
 import { DefaultLayoutComponent } from ".";
 
-describe("Test DOM", () => {
-  it("should render heading level one", () => {
+describe("DefaultLayoutComponent", () => {
+  it("should render elements in layout", () => {
     const { getByTestId } = render(<DefaultLayoutComponent />);
 
     const headerElement = getByTestId("header-element");
