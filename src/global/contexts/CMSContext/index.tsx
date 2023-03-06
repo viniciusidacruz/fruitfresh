@@ -12,8 +12,6 @@ export function CMSProvider({ children }: IProvider) {
     home: document?.data,
   } as IPages;
 
-  console.log(pages);
-
   return (
     <CMSContext.Provider value={{ pages }}>{children}</CMSContext.Provider>
   );

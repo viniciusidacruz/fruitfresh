@@ -1,7 +1,4 @@
 import { useCMS } from "@hooks/index";
-
-import { AvatarComponent } from "@/global/components";
-
 export function Home() {
   const {
     pages: { home },
