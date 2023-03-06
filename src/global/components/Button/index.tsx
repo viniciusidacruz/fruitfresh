@@ -3,30 +3,36 @@ import { IComponentParams } from "./types";
 export const ButtonComponent = ({
   icon,
   text,
-  disable,
-  isloading,
+  disabled,
+  isLoading,
+  ...props
 }: IComponentParams) => {
-  const buttonClassName = disable
-    ? "bg-lime-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed inline-flex items-center "
-    : "bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded inline-flex items-center ";
+  const buttonClassName = disabled
+    ? "opacity-50 cursor-not-allowed"
+    : "hover:bg-lime-600";
 
   return (
-    <div className="container mx-auto" data-testid="button-element">
-      <button className={buttonClassName} data-testid="buttonClassName-element">
-        <div className="text mr-2" data-testid="text-element">
-          <span>{text}</span>
-        </div>
-        {icon && (
-          <div className="icon" data-testid="icon-element">
-            <span>{icon}</span>
-          </div>
-        )}
-        {isloading && (
-          <div className="isloading" data-testid="isloading-element">
-            <span>{isloading}</span>
-          </div>
-        )}
-      </button>
-    </div>
+    <button
+      className={`mx-auto text-white py-2 px-4 rounded inline-flex items-center bg-lime-500 ${buttonClassName}`}
+      data-testid="button-element"
+      {...props}
+    >
+      {isLoading ? (
+        <span className="text mr-2" data-testid="loading-element">
+          Carregando ...
+        </span>
+      ) : (
+        <>
+          <span className="text mr-2" data-testid="text-element">
+            {text}
+          </span>
+          {icon && (
+            <div className="icon" data-testid="icon-element">
+              {icon}
+            </div>
+          )}
+        </>
+      )}
+    </button>
   );
 };

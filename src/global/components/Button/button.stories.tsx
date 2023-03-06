@@ -4,7 +4,7 @@ import { IComponentParams } from "./types";
 
 export default {
   title: "Components/Button",
-  Component: ButtonComponent,
+  component: ButtonComponent,
 } as Meta;
 
 export const Default: StoryObj<IComponentParams> = {
@@ -27,7 +27,7 @@ export const Default: StoryObj<IComponentParams> = {
     ),
 
     text: "Add to Cart",
-    disable: false,
-    isloading: false,
+    disabled: false,
+    isLoading: false,
   },
 };

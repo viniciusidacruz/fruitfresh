@@ -1,6 +1,8 @@
-export interface IComponentParams {
+import { ButtonHTMLAttributes } from "react";
+
+export interface IComponentParams
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
   text: string;
-  disable?: boolean;
-  isloading?: boolean;
+  isLoading?: boolean;
 }

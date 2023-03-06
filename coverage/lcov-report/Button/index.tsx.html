@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">97.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>32/32</span>
+                <span class='fraction'>37/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">97.36% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>32/32</span>
+                <span class='fraction'>37/38</span>
             </div>
         
             
@@ -95,7 +95,13 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -104,26 +110,32 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -132,31 +144,37 @@
 export const ButtonComponent = ({
   icon,
   text,
-  disable,
-  isloading,
+  disabled,
+  isLoading,
+  ...props
 }: IComponentParams) =&gt; {
-  const buttonClassName = disable
-    ? "bg-lime-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed inline-flex items-center "
-    : "bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded inline-flex items-center ";
+  const buttonClassName = <span class="branch-0 cbranch-no" title="branch not covered" >disabled</span>
+<span class="cstat-no" title="statement not covered" >    ? "opacity-50 cursor-not-allowed"</span>
+    : "hover:bg-lime-600";
 &nbsp;
   return (
-    &lt;div className="container mx-auto" data-testid="button-element"&gt;
-      &lt;button className={buttonClassName} data-testid="buttonClassName-element"&gt;
-        &lt;div className="text mr-2" data-testid="text-element"&gt;
-          &lt;span&gt;{text}&lt;/span&gt;
-        &lt;/div&gt;
-        {icon &amp;&amp; (
-          &lt;div className="icon" data-testid="icon-element"&gt;
-            &lt;span&gt;{icon}&lt;/span&gt;
-          &lt;/div&gt;
-        )}
-        {isloading &amp;&amp; (
-          &lt;div className="isloading" data-testid="isloading-element"&gt;
-            &lt;span&gt;{isloading}&lt;/span&gt;
-          &lt;/div&gt;
-        )}
-      &lt;/button&gt;
-    &lt;/div&gt;
+    &lt;button
+      className={`text-white py-2 px-4 rounded inline-flex items-center bg-lime-500 ${buttonClassName}`}
+      data-testid="button-element"
+      {...props}
+    &gt;
+      {isLoading ? (
+        &lt;span className="text mr-2" data-testid="loading-element"&gt;
+          Carregando ...
+        &lt;/span&gt;
+      ) : (
+        &lt;&gt;
+          &lt;span className="text mr-2" data-testid="text-element"&gt;
+            {text}
+          &lt;/span&gt;
+          {icon &amp;&amp; (
+            &lt;div className="icon" data-testid="icon-element"&gt;
+              {icon}
+            &lt;/div&gt;
+          )}
+        &lt;/&gt;
+      )}
+    &lt;/button&gt;
   );
 };
 &nbsp;</pre></td></tr></table></pre>
@@ -166,7 +184,7 @@ export const ButtonComponent = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-06T16:54:23.149Z
+                at 2023-03-06T19:53:47.847Z
             </div>
         <script src="../prettify.js"></script>
         <script>

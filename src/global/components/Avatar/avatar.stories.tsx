@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from "@storybook/react";
-
 import { AvatarComponent } from ".";
 import { IComponentParams } from "./types";
 
