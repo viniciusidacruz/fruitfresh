@@ -20,8 +20,10 @@
       "@global/*": ["./src/global/*"],
       "@types/*": ["./src/global/types/*"],
       "@pages/*": ["./src/global/pages/*"],
+      "@hooks/*": ["./src/global/hooks/*"],
       "@styles/*": ["./src/global/styles/*"],
       "@configs/*": ["./src/global/configs/*"],
+      "@contexts/*": ["./src/global/contexts/*"],
       "@services/*": ["./src/global/services/*"],
       "@components/*": ["./src/global/components/*"]
     }

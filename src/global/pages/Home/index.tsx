@@ -1,14 +1,11 @@
+import { useCMS } from "@hooks/index";
+
 import { AvatarComponent } from "@/global/components";
 
 export function Home() {
-  return (
-    <div>
-      <AvatarComponent
-        label="vinicius"
-        isprofilesquare
-        alt="Imagem para teste"
-        src="https://avatars.githubusercontent.com/u/84112057?v=4"
-      />
-    </div>
-  );
+  const {
+    pages: { home },
+  } = useCMS();
+
+  return <h1>{home.display_title[0].text}</h1>;
 }
