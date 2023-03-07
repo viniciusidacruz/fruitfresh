@@ -1,4 +1,5 @@
 import { useCMS } from "@hooks/index";
+
 export function Home() {
   const {
     pages: { home },

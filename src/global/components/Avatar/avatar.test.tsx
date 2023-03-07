@@ -24,7 +24,7 @@ describe("AvatarComponent", () => {
   });
 
   it("should render with correct src and alt", () => {
-    const { getByTestId, debug } = render(
+    const { getByTestId } = render(
       <AvatarComponent
         isprofilesquare
         alt="Imagem para teste"

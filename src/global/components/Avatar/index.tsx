@@ -15,6 +15,7 @@ export const AvatarComponent = ({
           data-testid="thumbnail-element"
           className={`Image w-6 h-6 rounded-${isprofilesquare ? "md" : "full"}`}
         />
+
         {label && (
           <div className="Label ml-2" data-testid="group-element">
             <h3 className="font-semibold text-slate-500 text-xs">{label}</h3>
