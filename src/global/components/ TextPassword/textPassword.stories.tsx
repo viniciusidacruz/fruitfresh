@@ -9,5 +9,6 @@ export default {
 export const Default: StoryObj<IComponentParams> = {
   args: {
     label: "Password",
+    disabled: true,
   },
 };
