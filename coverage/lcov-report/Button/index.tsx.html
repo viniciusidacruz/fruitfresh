@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Avatar/index.tsx</title>
+    <title>Code coverage report for Button/index.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">Avatar</a> index.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">Button</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">97.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>37/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">97.36% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>37/38</span>
             </div>
         
             
@@ -89,7 +89,19 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -99,6 +111,7 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -108,37 +121,60 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IComponentParams } from "./types";
 &nbsp;
-export const AvatarComponent = ({
-  src,
-  alt,
-  label,
-  isprofilesquare,
+export const ButtonComponent = ({
+  icon,
+  text,
+  disabled,
+  isLoading,
+  ...props
 }: IComponentParams) =&gt; {
+  const buttonClassName = <span class="branch-0 cbranch-no" title="branch not covered" >disabled</span>
+<span class="cstat-no" title="statement not covered" >    ? "opacity-50 cursor-not-allowed"</span>
+    : "hover:bg-lime-600";
+&nbsp;
   return (
-    &lt;div className="Container mx-auto " data-testid="avatar-element"&gt;
-      &lt;div className="flex items-center flex-row "&gt;
-        &lt;img
-          src={src}
-          alt={alt}
-          data-testid="thumbnail-element"
-          className={`Image w-6 h-6 rounded-${isprofilesquare ? "md" : "full"}`}
-        /&gt;
-        {label &amp;&amp; (
-          &lt;div className="Label ml-2" data-testid="group-element"&gt;
-            &lt;h3 className="font-semibold text-slate-500 text-xs"&gt;{label}&lt;/h3&gt;
-          &lt;/div&gt;
-        )}
-      &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;button
+      className={`text-white py-2 px-4 rounded inline-flex items-center bg-lime-500 ${buttonClassName}`}
+      data-testid="button-element"
+      {...props}
+    &gt;
+      {isLoading ? (
+        &lt;span className="text mr-2" data-testid="loading-element"&gt;
+          Carregando ...
+        &lt;/span&gt;
+      ) : (
+        &lt;&gt;
+          &lt;span className="text mr-2" data-testid="text-element"&gt;
+            {text}
+          &lt;/span&gt;
+          {icon &amp;&amp; (
+            &lt;div className="icon" data-testid="icon-element"&gt;
+              {icon}
+            &lt;/div&gt;
+          )}
+        &lt;/&gt;
+      )}
+    &lt;/button&gt;
   );
 };
 &nbsp;</pre></td></tr></table></pre>
