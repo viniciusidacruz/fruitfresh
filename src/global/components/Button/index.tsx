@@ -13,7 +13,7 @@ export const ButtonComponent = ({
 
   return (
     <button
-      className={`mx-auto text-white py-2 px-4 rounded inline-flex items-center bg-lime-500 ${buttonClassName}`}
+      className={`w-full text-white py-2 px-4 rounded flex justify-center items-center bg-lime-500 ${buttonClassName}`}
       data-testid="button-element"
       {...props}
     >

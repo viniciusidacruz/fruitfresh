@@ -16,7 +16,7 @@ export const TextPasswordComponent = ({
   const inputType = showPassword ? "text" : "password";
 
   return (
-    <div className="w-full" data-testid="group-element">
+    <div className="w-full select-none" data-testid="group-element">
       {label && (
         <label
           data-testid="label-element"
@@ -43,7 +43,7 @@ export const TextPasswordComponent = ({
         <button
           className={`p-1 cursor-${props.disabled ? "not-allowed" : "pointer"}`}
           onClick={toggleShowPassword}
-          data-testid="icon-element"
+          data-testid="button-element"
           disabled={props.disabled}
         >
           {showPassword ? (

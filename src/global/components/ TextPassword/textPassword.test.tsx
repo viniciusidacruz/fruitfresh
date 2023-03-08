@@ -9,11 +9,11 @@ describe("TextpasswordComponent", () => {
 
     const groupELement = getByTestId("group-element");
     const inputElement = getByTestId("input-element");
-    const iconElement = getByTestId("icon-element");
+    const ButtonElement = getByTestId("button-element");
 
     expect(groupELement).toBeInTheDocument();
     expect(inputElement).toBeInTheDocument();
-    expect(iconElement).toBeInTheDocument();
+    expect(ButtonElement).toBeInTheDocument();
   });
 
   it("should render with correct label", () => {
@@ -27,12 +27,12 @@ describe("TextpasswordComponent", () => {
   it("should be able to change icon and input type", () => {
     const { getByTestId } = render(<TextPasswordComponent />);
 
-    const iconElement = getByTestId("icon-element");
+    const ButtonElement = getByTestId("button-element");
     const iconlineEyeInvisible = getByTestId("iconline-eye-invisible");
 
     expect(iconlineEyeInvisible).toBeInTheDocument();
 
-    fireEvent.click(iconElement);
+    fireEvent.click(ButtonElement);
 
     const iconlineEye = getByTestId("iconline-eye");
 
