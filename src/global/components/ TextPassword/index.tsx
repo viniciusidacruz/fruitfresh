@@ -50,13 +50,13 @@ export const TextPasswordComponent = ({
             <AiOutlineEye
               color="#bfb9b9"
               size={25}
-              data-testid="iconline-eye"
+              data-testid="iconLine-eye"
             />
           ) : (
             <AiOutlineEyeInvisible
               color="#bfb9b9"
               size={25}
-              data-testid="iconline-eye-invisible"
+              data-testid="iconLine-eye-invisible"
             />
           )}
         </button>

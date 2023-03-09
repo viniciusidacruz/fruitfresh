@@ -3,7 +3,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 import { TextPasswordComponent } from ".";
 
-describe("TextpasswordComponent", () => {
+describe("TextPasswordComponent", () => {
   it("should render elements", () => {
     const { getByTestId } = render(<TextPasswordComponent />);
 
@@ -28,14 +28,14 @@ describe("TextpasswordComponent", () => {
     const { getByTestId } = render(<TextPasswordComponent />);
 
     const ButtonElement = getByTestId("button-element");
-    const iconlineEyeInvisible = getByTestId("iconline-eye-invisible");
+    const iconLineEyeInvisible = getByTestId("iconLine-eye-invisible");
 
-    expect(iconlineEyeInvisible).toBeInTheDocument();
+    expect(iconLineEyeInvisible).toBeInTheDocument();
 
     fireEvent.click(ButtonElement);
 
-    const iconlineEye = getByTestId("iconline-eye");
+    const iconLineEye = getByTestId("iconLine-eye");
 
-    expect(iconlineEye).toBeInTheDocument();
+    expect(iconLineEye).toBeInTheDocument();
   });
 });

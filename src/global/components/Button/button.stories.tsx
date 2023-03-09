@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
 import { TiShoppingCart } from "react-icons/ti";
+import { Meta, StoryObj } from "@storybook/react";
+
 import { ButtonComponent } from ".";
 import { IComponentParams } from "./types";
 
