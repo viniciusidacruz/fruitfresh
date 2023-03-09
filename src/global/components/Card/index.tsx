@@ -1,113 +1,113 @@
-import { ButtonComponent } from "../Button";
-import { IcomponentParams } from "./types";
-import {
-  TiHeartFullOutline,
-  TiHeartOutline,
-  TiShoppingCart,
-  TiTrash,
-} from "react-icons/ti";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  TiShoppingCart,
+  TiHeartOutline,
+  TiHeartFullOutline,
+} from "react-icons/ti";
+
+import { limitString } from "../../utils/limitString";
+import { useFormattedCurrency } from "../../hooks/useFormattedCurrency";
+
+import { ButtonComponent } from "../Button";
+
+import { IComponentParams } from "./types";
 
 export const CardComponent = ({
-  price,
-  discount,
-  priceDiscount,
-  description,
-  title,
-  image,
-  href,
-  target,
-  category,
-  favorite,
-}: IcomponentParams) => {
-  const [isFavorite, setFavorite] = useState(false);
+  favorite = false,
+  ...props
+}: IComponentParams) => {
+  const [isFavorite, setFavorite] = useState(favorite);
+
+  const { elementCurrency } = useFormattedCurrency();
+
   const toggleShowPassword = () => setFavorite(!isFavorite);
 
   return (
-    <div
-      className="max-w-xs rounded overflow-hidden shadow-xl p-4 select-none"
+    <article
       data-testid="group-element"
+      className="max-w-xs rounded overflow-hidden shadow-xl p-4 select-none"
     >
-      <div className="w-full flex justify-between">
-        <button data-testid="buttonDelet-element" type="submit">
-          <span data-testid="iconTrash-element">
-            <TiTrash color="rgba(132 204 22)" size={25} />
-          </span>
-        </button>
+      {props.discount && (
         <span
           data-testid="discount-element"
           className="p-1 text-white rounded-2xl bg-lime-500"
         >
-          {discount}
+          -{props.discount}%
+        </span>
+      )}
+
+      <figure className="w-full mb-2">
+        <NavLink target="_self" to={props.href} data-testid="link-element">
+          <img
+            src={props.image}
+            data-testid="image-element"
+            alt={props.alternativeText}
+          />
+        </NavLink>
+      </figure>
+
+      <div className="mb-3 flex justify-between align-center">
+        <h3>{props.title}</h3>
+
+        <span className="ml-32 text-xs text-slate-500">
+          {props.category || "Desconhecido"}
         </span>
       </div>
-      <div className="w-full mb-2">
-        <a data-testid="link-element" href={href} target={target}>
-          <img data-testid="image-element" src={image} alt="foto da fruta" />
-        </a>
-      </div>
-      <div data-testid="title-element" className="mb-3 flex align-center">
-        <h1>{title}</h1>
-        <div data-testid="categorys-element">
-          {category ? (
+
+      <p className="mb-3 text-xs text-slate-700">
+        {limitString(props.description)}
+      </p>
+
+      <div>
+        <span className="mb-1 text-xs text-slate-500">Preço por Kg</span>
+        <div className="mb-4 flex justify-between items-center text-lg">
+          <span data-testid="priceDiscount-element" className="mr-6">
+            {elementCurrency({
+              value: props.price,
+              discount: props.discount,
+            })}
+          </span>
+
+          {props.discount && (
             <span
-              data-testid="category-element"
-              className="ml-32 text-xs text-slate-400"
+              data-testid="price-element"
+              className="opacity-50 line-through border-b"
             >
-              {category}
-            </span>
-          ) : (
-            <span
-              data-testid="unknown-element"
-              className="ml-32 text-xs text-slate-400"
-            >
-              Desconhecido
+              {elementCurrency({ value: props.price })}
             </span>
           )}
+
+          <button
+            type="button"
+            onClick={toggleShowPassword}
+            className="ml-24 items-center"
+            data-testid="buttonFavorite-element"
+            aria-label="Botão de adicionar aos favoritos"
+          >
+            {isFavorite ? (
+              <TiHeartFullOutline
+                size={25}
+                color="rgba(132 204 22)"
+                data-testid="iconHeartFull-element"
+              />
+            ) : (
+              <TiHeartOutline
+                size={25}
+                color="rgba(132 204 22)"
+                data-testid="iconHeart-element"
+              />
+            )}
+          </button>
         </div>
       </div>
-      <div
-        data-testid="description-element"
-        className="mb-1 text-xs text-slate-500"
-      >
-        <span>
-          <h3>{description}</h3>
-        </span>
-      </div>
-      <div className="mb-4 flex justify-between items-center text-lg">
-        <span data-testid="priceDiscount-element" className="mr-6">
-          {priceDiscount}
-        </span>
-        <span
-          className="opacity-50 line-through border-b"
-          data-testid="price-element"
-        >
-          {price}
-        </span>
-        <button
-          data-testid="buttonFavorite-element"
-          type="submit"
-          className="ml-24 items-center "
-          onClick={toggleShowPassword}
-        >
-          {isFavorite ? (
-            <TiHeartFullOutline
-              data-testid="iconHeartFull-element"
-              color="rgba(132 204 22)"
-              size={25}
-            />
-          ) : (
-            <TiHeartOutline
-              data-testid="iconHeart-element"
-              color="rgba(132 204 22)"
-              size={25}
-            />
-          )}
-        </button>
-      </div>
-      <div data-testid="buttonAdd-element" className="flex items-center">
-        <ButtonComponent text={"Add to Cart"} icon={<TiShoppingCart />} />
-      </div>
-    </div>
+
+      <ButtonComponent
+        text="Add to Cart"
+        icon={<TiShoppingCart />}
+        data-testid="buttonAdd-element"
+        arial-label="Adicionar produto ao carrinho"
+      />
+    </article>
   );
 };

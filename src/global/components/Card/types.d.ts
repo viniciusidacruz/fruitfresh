@@ -1,12 +1,11 @@
-export interface IcomponentParams {
-  price: string | number;
-  priceDiscount?: string | number;
-  discount?: string | number;
-  description: string;
+export interface IComponentParams {
+  href: string;
   title: string;
   image: string;
-  href: string;
-  target: string;
+  price: number;
   category?: string;
   favorite: boolean;
+  discount?: number;
+  description: string;
+  alternativeText: string;
 }
