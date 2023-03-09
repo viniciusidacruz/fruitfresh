@@ -14,10 +14,11 @@ export const Default = () => (
     <IntlProvider locale="pt-br">
       <CardComponent
         href=""
-        price={3.9}
+        price={5.9}
         discount={5}
         title="Maça Red"
         favorite={false}
+        inStock={false}
         category="Frutas"
         alternativeText="Imagem de duas maçãs inteiras e uma cortada ao meio"
         image="https://superprix.vteximg.com.br/arquivos/ids/207526-600-600/Maca-Red.png?v=637855424537770000"
