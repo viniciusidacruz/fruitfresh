@@ -3,17 +3,17 @@ import "@testing-library/jest-dom/extend-expect";
 
 import { TextPasswordComponent } from ".";
 
-describe("TextpasswordComponent", () => {
+describe("TextPasswordComponent", () => {
   it("should render elements", () => {
     const { getByTestId } = render(<TextPasswordComponent />);
 
     const groupELement = getByTestId("group-element");
     const inputElement = getByTestId("input-element");
-    const iconElement = getByTestId("icon-element");
+    const ButtonElement = getByTestId("button-element");
 
     expect(groupELement).toBeInTheDocument();
     expect(inputElement).toBeInTheDocument();
-    expect(iconElement).toBeInTheDocument();
+    expect(ButtonElement).toBeInTheDocument();
   });
 
   it("should render with correct label", () => {
@@ -27,15 +27,15 @@ describe("TextpasswordComponent", () => {
   it("should be able to change icon and input type", () => {
     const { getByTestId } = render(<TextPasswordComponent />);
 
-    const iconElement = getByTestId("icon-element");
-    const iconlineEyeInvisible = getByTestId("iconline-eye-invisible");
+    const ButtonElement = getByTestId("button-element");
+    const iconLineEyeInvisible = getByTestId("iconLine-eye-invisible");
 
-    expect(iconlineEyeInvisible).toBeInTheDocument();
+    expect(iconLineEyeInvisible).toBeInTheDocument();
 
-    fireEvent.click(iconElement);
+    fireEvent.click(ButtonElement);
 
-    const iconlineEye = getByTestId("iconline-eye");
+    const iconLineEye = getByTestId("iconLine-eye");
 
-    expect(iconlineEye).toBeInTheDocument();
+    expect(iconLineEye).toBeInTheDocument();
   });
 });

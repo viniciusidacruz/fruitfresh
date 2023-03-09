@@ -1,3 +1,4 @@
+import { IntlProvider } from "react-intl";
 import { PrismicProvider } from "@prismicio/react";
 
 import { AppRoutes } from "@configs/routes";
@@ -8,7 +9,9 @@ export function App() {
   return (
     <PrismicProvider client={client}>
       <CMSProvider>
-        <AppRoutes />
+        <IntlProvider locale="pt-br">
+          <AppRoutes />
+        </IntlProvider>
       </CMSProvider>
     </PrismicProvider>
   );

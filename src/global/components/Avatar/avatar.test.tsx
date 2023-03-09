@@ -1,4 +1,3 @@
-import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
@@ -26,7 +25,7 @@ describe("AvatarComponent", () => {
   it("should render with correct src and alt", () => {
     const { getByTestId } = render(
       <AvatarComponent
-        isprofilesquare
+        isProfileSquare
         alt="Imagem para teste"
         src="https://avatars.githubusercontent.com/u/84112057?v=4"
       />

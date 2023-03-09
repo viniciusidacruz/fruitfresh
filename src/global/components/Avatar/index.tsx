@@ -4,7 +4,7 @@ export const AvatarComponent = ({
   src,
   alt,
   label,
-  isprofilesquare,
+  isProfileSquare,
 }: IComponentParams) => {
   return (
     <div className="Container mx-auto " data-testid="avatar-element">
@@ -13,7 +13,7 @@ export const AvatarComponent = ({
           src={src}
           alt={alt}
           data-testid="thumbnail-element"
-          className={`Image w-6 h-6 rounded-${isprofilesquare ? "md" : "full"}`}
+          className={`Image w-6 h-6 rounded-${isProfileSquare ? "md" : "full"}`}
         />
 
         {label && (
