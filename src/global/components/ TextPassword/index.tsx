@@ -29,7 +29,7 @@ export const TextPasswordComponent = ({
 
       <div
         data-testid="input-element"
-        className={`inline-flex items-center border border-gray-200 w-full rounded-lg ${textPasswordClassName}`}
+        className={`inline-flex items-center border border-gray-200 w-full rounded-lg p-1 ${textPasswordClassName}`}
       >
         <input
           type={inputType}
