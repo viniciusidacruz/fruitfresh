@@ -62,11 +62,11 @@ export const CardComponent = ({
       </p>
 
       <div>
-        <span className="mb-1 text-xs text-slate-500">Preço por Kg</span>
+        <span className="text-xs text-slate-500">Preço por Kg</span>
         <p
           className={`${
             props.inStock ? "text-lime-500" : "text-red-600"
-          } text-bold text-xs`}
+          } text-bold text-xs mb-3`}
         >
           {(props.inStock && "Em estoque") || "Produto Indisponivel"}
         </p>
