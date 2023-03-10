@@ -23,6 +23,8 @@ export const CardComponent = ({
 
   const toggleShowPassword = () => setFavorite(!isFavorite);
 
+  console.log("instock", props.inStock);
+
   return (
     <article
       data-testid="group-element"
@@ -60,7 +62,14 @@ export const CardComponent = ({
       </p>
 
       <div>
-        <span className="mb-1 text-xs text-slate-500">Preço por Kg</span>
+        <span className="text-xs text-slate-500">Preço por Kg</span>
+        <p
+          className={`${
+            props.inStock ? "text-lime-500" : "text-red-600"
+          } text-bold text-xs mb-3`}
+        >
+          {(props.inStock && "Em estoque") || "Produto Indisponivel"}
+        </p>
         <div className="mb-4 flex justify-between items-center text-lg">
           <span data-testid="priceDiscount-element" className="mr-6">
             {elementCurrency({
@@ -107,6 +116,7 @@ export const CardComponent = ({
         icon={<TiShoppingCart />}
         data-testid="buttonAdd-element"
         arial-label="Adicionar produto ao carrinho"
+        disabled={!props.inStock}
       />
     </article>
   );

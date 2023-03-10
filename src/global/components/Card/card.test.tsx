@@ -13,6 +13,7 @@ const makeSut = () => {
           price={3.9}
           href="/products"
           favorite={false}
+          inStock={true}
           category="Frutas"
           title="Nome do produto"
           alternativeText="Imagem de duas maçãs inteiras e uma cortada ao meio"
@@ -38,6 +39,7 @@ describe("CardComponent", () => {
       "Esse paragrafo servira para testes da descrição do produto"
     );
     const buttonFavoriteElement = getByTestId("buttonFavorite-element");
+    const inStockElement = getByText("Em estoque" || "Produto Indisponivel");
 
     expect(linkElement).toBeInTheDocument();
     expect(groupElement).toBeInTheDocument();
@@ -47,6 +49,7 @@ describe("CardComponent", () => {
     expect(buttonAddElement).toBeInTheDocument();
     expect(descriptionElement).toBeInTheDocument();
     expect(buttonFavoriteElement).toBeInTheDocument();
+    expect(inStockElement).toBeInTheDocument();
   });
 
   it("must be able to check whether or not category exists", () => {
