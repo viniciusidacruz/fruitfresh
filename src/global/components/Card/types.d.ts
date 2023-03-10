@@ -8,4 +8,5 @@ export interface IComponentParams {
   discount?: number;
   description: string;
   alternativeText: string;
+  inStock: boolean;
 }
