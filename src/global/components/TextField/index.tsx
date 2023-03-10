@@ -1,10 +1,10 @@
-import { IcomponentParams } from "./types";
+import { IComponentParams } from "./types";
 
 export const TextFieldComponent = ({
   icon,
   label,
   ...props
-}: IcomponentParams) => {
+}: IComponentParams) => {
   const textFieldClassName = props.disabled ? "opacity-75" : "bg-white";
 
   return (
@@ -26,7 +26,7 @@ export const TextFieldComponent = ({
           <span
             data-testid="icon-element"
             className={`p-1 cursor-${
-              props.disabled ? "not-allowed" : "pointer"
+              props.disabled ? "not-allowed" : "default"
             }`}
           >
             {icon}
@@ -39,6 +39,10 @@ export const TextFieldComponent = ({
           {...props}
         />
       </div>
+
+      {props.message && (
+        <p className="text-red-600 text-bold text-xs mt-3">{props.message}</p>
+      )}
     </div>
   );
 };

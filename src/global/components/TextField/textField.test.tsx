@@ -13,10 +13,11 @@ describe("TextFieldComponent", () => {
     expect(groupELement).toBeInTheDocument();
     expect(inputElement).toBeInTheDocument();
   });
-  it("should field icon to be null", () => {
-    const { getByTestId } = render(<TextFieldComponent />);
 
-    const iconELement = getByTestId("icon-element");
+  it("should field icon to be null", () => {
+    const { queryByTestId } = render(<TextFieldComponent />);
+
+    const iconELement = queryByTestId("icon-element");
 
     expect(iconELement).toBeNull();
   });

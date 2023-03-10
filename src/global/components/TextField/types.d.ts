@@ -1,7 +1,8 @@
 import { InputHTMLAttributes } from "react";
 
-export interface IcomponentParams
+export interface IComponentParams
   extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   icon?: ReactNode;
+  message?: string;
 }
