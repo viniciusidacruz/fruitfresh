@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
+import { FooterComponent } from "../../Footer";
 
 export function DefaultLayoutComponent() {
   return (
@@ -8,7 +9,9 @@ export function DefaultLayoutComponent() {
 
       <Outlet />
 
-      <footer data-testid="footer-element">Footer</footer>
+      <footer data-testid="footer-element">
+        <FooterComponent />
+      </footer>
     </Fragment>
   );
 }
