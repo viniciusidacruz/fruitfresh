@@ -11,5 +11,6 @@ export const Default: StoryObj<IComponentParams> = {
   args: {
     label: "Password",
     disabled: true,
+    message: "Erro inesperado",
   },
 };

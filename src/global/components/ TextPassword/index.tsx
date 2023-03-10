@@ -61,6 +61,10 @@ export const TextPasswordComponent = ({
           )}
         </button>
       </div>
+
+      {props.message && (
+        <p className="text-red-600 text-bold text-xs mt-3">{props.message}</p>
+      )}
     </div>
   );
 };
