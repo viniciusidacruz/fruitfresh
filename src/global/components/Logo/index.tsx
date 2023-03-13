@@ -2,25 +2,20 @@ import { NavLink } from "react-router-dom";
 
 export const LogoComponent = () => {
   return (
-    <figure
-      className="select-none flex items-center"
-      data-testid="group-element"
-    >
-      <NavLink to={"/"} data-testid="link-element">
-        <img
-          className=" w-15 h-15 rounded-full"
-          data-testid="image-element"
-          src="./logo.png"
-          alt="Imagem de uma melancia cortada ao meio"
-        ></img>
+    <NavLink to="/" data-testid="link-element" className="flex items-center	">
+      <img
+        className="w-10 h-10"
+        data-testid="image-element"
+        src="./logo.png"
+        alt="Imagem de uma melancia cortada ao meio"
+      />
 
-        <span
-          data-testid="label-element"
-          className="text-xl text-lime-900 text-bold justify-center mt-2 select-none hidden sm:flex"
-        >
-          Fruit Fresh
-        </span>
-      </NavLink>
-    </figure>
+      <span
+        data-testid="label-element"
+        className="text-xl bg-gradient-to-r text-transparent bg-clip-text from-red-500 to-green-500 font-bold hidden lg:block"
+      >
+        Fruit Fresh
+      </span>
+    </NavLink>
   );
 };

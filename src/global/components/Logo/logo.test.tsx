@@ -19,12 +19,10 @@ describe("LogoComponent", () => {
   it("should render elements", () => {
     const { getByTestId } = render(makeSut());
 
-    const groupElement = getByTestId("group-element");
     const linkElement = getByTestId("link-element");
     const imageElement = getByTestId("image-element");
     const labelElement = getByTestId("label-element");
 
-    expect(groupElement).toBeInTheDocument();
     expect(linkElement).toBeInTheDocument();
     expect(labelElement).toBeInTheDocument();
     expect(imageElement).toBeInTheDocument();
