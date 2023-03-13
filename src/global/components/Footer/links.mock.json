@@ -1,0 +1,79 @@
+{
+  "company": {
+    "title": "Empresa",
+    "list_links": [
+      {
+        "label": "Quem somos",
+        "url": "#"
+      },
+      {
+        "label": "Nossos Serviços",
+        "url": "#"
+      },
+      {
+        "label": "Politicas de Privacidade",
+        "url": "#"
+      },
+      {
+        "label": "Programas de Afiliados",
+        "url": "#"
+      }
+    ]
+  },
+  "help": {
+    "title": "Obter Ajuda",
+    "links_get_help": [
+      {
+        "label": "FaQ",
+        "url": "#"
+      },
+      {
+        "label": "Transporte",
+        "url": "#"
+      },
+      {
+        "label": "Devoluções",
+        "url": "#"
+      },
+      {
+        "label": "Status de Pedido",
+        "url": "#"
+      },
+      {
+        "label": "Opões de Pagamento",
+        "url": "#"
+      }
+    ]
+  },
+  "onlineStore": {
+    "title": "Loja OnLine",
+    "links_online_store": [
+      {
+        "label": "Relógio",
+        "url": "#"
+      },
+      {
+        "label": "Sacola",
+        "url": "#"
+      },
+      {
+        "label": "Calçado",
+        "url": "#"
+      },
+      {
+        "label": "Endereço",
+        "url": "#"
+      }
+    ]
+  },
+
+  "subscribe": {
+    "title": "Se Subscreva",
+    "links_social": [
+      {
+        "urlFacebook": "https://www.facebook.com/",
+        "urlInstagram": "https://www.instagram.com/"
+      }
+    ]
+  }
+}
