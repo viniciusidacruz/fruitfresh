@@ -12,12 +12,7 @@ export default {
 export const Default = () => (
   <BrowserRouter>
     <IntlProvider locale="pt-br">
-      <LogoComponent
-        href="/home"
-        alternativeText="Imagem de uma melancia cortada ao meio"
-        image="./logo.png"
-        label="Fruit Fresh"
-      />
+      <LogoComponent />
     </IntlProvider>
   </BrowserRouter>
 );

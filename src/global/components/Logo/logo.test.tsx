@@ -9,12 +9,7 @@ const makeSut = () => {
   return (
     <BrowserRouter>
       <IntlProvider locale="pt-br">
-        <LogoComponent
-          href="/"
-          alternativeText="Imagem de uma melancia cortada ao meio"
-          image="./logo.png"
-          label="FruitFresh"
-        />
+        <LogoComponent />
       </IntlProvider>
     </BrowserRouter>
   );
