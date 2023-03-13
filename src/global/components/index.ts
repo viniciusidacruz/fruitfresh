@@ -4,3 +4,4 @@ export * from "./Button";
 export * from "./TextField";
 export * from "./ TextPassword";
 export * from "./layouts/Default";
+export * from "./Logo";
